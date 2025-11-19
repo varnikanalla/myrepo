@@ -3,21 +3,13 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                checkout scm
-            }
+            steps { checkout scm }
         }
-
         stage('Compile') {
-            steps {
-                bat 'javac HelloWorld.java'
-            }
+            steps { bat 'javac HelloWorld.java' }
         }
-
         stage('Run') {
-            steps {
-                bat 'java HelloWorld'
-            }
+            steps { bat 'java HelloWorld' }
         }
     }
 }
